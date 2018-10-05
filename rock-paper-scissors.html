@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <script>
+        let choices = ["Rock", "Paper", "Scissors"]; //Options for the game//
+
+        function computerPlay() {
+            let randomComputer = choices[Math.floor(Math.random()*choices.length)];
+            return randomComputer;
+        }
+
+        function playRound(playerSelection, computerSelection) {
+            let p1 = playerSelection.lowercase(),
+                p2 = computerSelection.lowercase(),
+                result;
+            
+            if (((p1 == 'Rock') && (p2 == 'Scissors')) ||
+            ((p1 == 'Scissors') && (p2 == 'Paper')) ||
+            ((p1 == 'Paper') && (p2 == 'Rock'))) {
+                console.log('Congrats! ${playerSelection} beats ${computerSelection}');
+                score[0]++;
+            } else if (p1==p2) {
+                console.log("It's a TIE!")
+            } else {
+                console.log("You lose! ${computerSelection} beats ${playerSelection}")
+            }
+            return score;
+        }
+
+        
+
+    </script>
+
+</body>
+</html>
