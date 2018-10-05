@@ -32,7 +32,21 @@
             return score;
         }
 
+        function playerPlay(selection) {
+            if (choices.includes(selection.toLowerCase())) {
+				return selection;
+            } else {
+                selection = prompt('Your input is invalid! Please try again with: Rock, Paper, or Scissors', "");
+
+                if (playerPlay(selection)) {
+                    return selection;
+                }
+            }
+        }
+
         
+
+
 
     </script>
 
